@@ -9,7 +9,7 @@ import Experience from './Experience';
 import Contact from './Contact';
 import Footer from './Footer';
 import N8NChatbot from './N8NChatbot'; // Add this import
-import './global.css';
+import './Global.css';
 import './App.css';
 import CustomCursor from './CustomCursor';
 
