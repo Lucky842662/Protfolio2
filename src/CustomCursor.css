@@ -1,0 +1,134 @@
+/* Custom Cursor Styles */
+html, body, a, button, p, div, span, h1, h2, h3, h4, h5, h6, input, textarea {
+    cursor: none !important;
+  }
+  
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+/* Main cursor dot */
+.cursor-dot {
+  background: #6366f1;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+.cursor-dot.hover {
+  background: #8b5cf6;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot.click {
+  transform: scale(0.8);
+}
+
+.cursor-dot.magnetic {
+  background: #ec4899;
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.8);
+}
+
+/* Cursor ring */
+.cursor-ring {
+  border: 2px solid rgba(99, 102, 241, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  transition: border-color 0.3s ease;
+}
+
+.cursor-ring.hover {
+  border-color: #8b5cf6;
+  border-width: 3px;
+  background: rgba(139, 92, 246, 0.1);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.cursor-ring.click {
+  transform: scale(0.9);
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.2);
+}
+
+.cursor-ring.magnetic {
+  border-color: #ec4899;
+  box-shadow: 0 0 40px rgba(236, 72, 153, 0.4);
+  animation: pulse 1.5s ease infinite;
+}
+
+/* Trailing dots effect (optional) */
+.cursor-trail {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide default cursor globally */
+* {
+  cursor: none !important;
+}
+
+/* Show default cursor on mobile/touch devices */
+@media (max-width: 768px) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+  
+  * {
+    cursor: auto !important;
+  }
+}
+
+/* Optional: Custom cursor for different elements */
+a:hover ~ .cursor-ring,
+button:hover ~ .cursor-ring,
+[data-magnetic]:hover ~ .cursor-ring {
+  border-color: #8b5cf6;
+  transform: scale(1.5);
+}
+
+/* Cursor text for special elements */
+.cursor-ring[data-text]::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: white;
+  white-space: nowrap;
+}

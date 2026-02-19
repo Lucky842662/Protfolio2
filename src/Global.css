@@ -1,0 +1,119 @@
+/* Loading Animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .terminal-loader {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+  }
+  
+  .terminal-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .terminal-button.red { background: #ff5f56; }
+  .terminal-button.yellow { background: #ffbd2e; }
+  .terminal-button.green { background: #27c93f; }
+  
+  .terminal-text {
+    color: var(--primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+  }
+  
+  .terminal-text span {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  /* Smooth Scroll Progress */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform-origin: 0%;
+    z-index: 9999;
+  }
+  
+  /* Code Snippet Styling */
+  .code-snippet {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .code-snippet::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
+    animation: gradientMove 3s linear infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .code-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .line-number {
+    color: var(--gray);
+    width: 30px;
+    text-align: right;
+  }
+  
+  .line-content {
+    color: var(--light);
+  }
+  
+  .line-content .keyword { color: var(--primary); }
+  .line-content .string { color: var(--success); }
+  .line-content .comment { color: var(--gray); }
+  .line-content .function { color: var(--secondary); }
+
+
+
+  

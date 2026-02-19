@@ -1,0 +1,175 @@
+.experience {
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .experience::before {
+    content: '<experience>';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .experience::after {
+    content: '</experience>';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+  }
+  
+  .column-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--light);
+  }
+  
+  .column-title svg {
+    color: var(--primary);
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 30px;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border: 3px solid var(--dark);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+  }
+  
+  .timeline-dot.education {
+    background: linear-gradient(135deg, var(--secondary), var(--success));
+  }
+  
+  .timeline-period {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  
+  .timeline-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--light);
+  }
+  
+  .timeline-subtitle {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-description {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+  }
+  
+  .timeline-description li {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .timeline-description li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+  }
+  
+  .timeline-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .cert-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cert-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cert-card h4 {
+    color: var(--light);
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .cert-card p {
+    color: var(--gray);
+    font-size: 0.8rem;
+  }
+  
+  @media (max-width: 968px) {
+    .experience-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  
+    .certifications-grid {
+      grid-template-columns: 1fr;
+    }
+  }
