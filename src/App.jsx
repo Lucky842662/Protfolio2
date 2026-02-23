@@ -12,6 +12,7 @@ import N8NChatbot from './N8NChatbot'; // Add this import
 import './Global.css';
 import './App.css';
 import CustomCursor from './CustomCursor';
+import ShootingStars from './ShootingStars';
 
 function App() {
   useEffect(() => {
@@ -29,10 +30,11 @@ function App() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
+        <ShootingStars />
         <Navbar />
         <main>
           <Hero />
-          <About /> 
+          <About />
           <Skill />
           <Project />
           <Experience />
@@ -45,7 +47,7 @@ function App() {
           />
           {/* Add chatbot here - after CustomCursor but before Footer */}
           {/* Use the default webhook URL defined inside N8NChatbot.jsx */}
-          <N8NChatbot 
+          <N8NChatbot
             title="Sophia"
             primaryColor="#6366f1"
           />

@@ -31,7 +31,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Format message for WhatsApp
       const whatsappMessage = `*New Contact Form Submission*%0A%0A
@@ -41,18 +41,18 @@ const Contact = () => {
 *Message:* ${formData.message}`;
 
       // Your WhatsApp number (with country code, no + or spaces)
-      const phoneNumber = '919001361980'; // Format: country code + number
-      
+      const phoneNumber = '+919001361980'; // Format: country code + number
+
       // Create WhatsApp URL
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-      
+
       // Open WhatsApp in new tab
       window.open(whatsappUrl, '_blank');
-      
+
       // Show success
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-      
+
     } catch (error) {
       console.error('Error:', error);
       setSubmitStatus('error');
@@ -73,8 +73,8 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: <FaGithub />, url: 'https://github.com/luckyshankhala', label: 'GitHub' },
-    { icon: <FaLinkedin />, url: 'https://linkedin.com/in/luckyshankhala', label: 'LinkedIn' },
-    { icon: <FaTwitter />, url: 'https://twitter.com/luckyshankhala', label: 'Twitter' },
+    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/lucky-shankhala-800457276?utm_source=share_via&utm_content=profile&utm_medium=member_android', label: 'LinkedIn' },
+    { icon: <FaTwitter />, url: 'https://x.com/lucky64825', label: 'Twitter' },
     { icon: <FaWhatsapp />, url: 'https://wa.me/919001361980', label: 'WhatsApp' }
   ];
 
@@ -101,8 +101,8 @@ const Contact = () => {
   };
 
   return (
-    <motion.section 
-      id="contact" 
+    <motion.section
+      id="contact"
       className="contact"
       ref={ref}
       initial="hidden"
@@ -117,10 +117,10 @@ const Contact = () => {
         <div className="contact-container">
           <motion.div className="contact-info" variants={itemVariants}>
             <div className="code-comment">&lt;!-- Let's collaborate --&gt;</div>
-            
+
             <h3 className="info-title">Have a project in mind?</h3>
             <p className="info-description">
-              I'm always interested in hearing about new opportunities, 
+              I'm always interested in hearing about new opportunities,
               interesting projects, or just having a chat about tech.
             </p>
 
@@ -157,18 +157,18 @@ const Contact = () => {
                 >
                   {social.icon}
                 </motion.a>
-              ))}   
+              ))}
             </div>
 
             <div className="availability">
               <div className="availability-dot"></div>
               <span>
-              Hire me, and you're getting more than a resume. You're getting a Gen Z developer who understands that code is just one part of the package—the other parts? Creativity, communication, and looking good while getting things done.</span>
+                Hire me, and you're getting more than a resume. You're getting a Gen Z developer who understands that code is just one part of the package—the other parts? Creativity, communication, and looking good while getting things done.</span>
             </div>
           </motion.div>
 
-          <motion.form 
-            className="contact-form" 
+          <motion.form
+            className="contact-form"
             variants={itemVariants}
             onSubmit={handleSubmit}
           >
@@ -253,7 +253,7 @@ const Contact = () => {
             </motion.button>
 
             {submitStatus === 'success' && (
-              <motion.div 
+              <motion.div
                 className="success-message"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -263,7 +263,7 @@ const Contact = () => {
             )}
 
             {submitStatus === 'error' && (
-              <motion.div 
+              <motion.div
                 className="error-message"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

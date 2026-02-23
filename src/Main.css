@@ -5,7 +5,7 @@
   --primary-dark: #4f46e5;
   --secondary: #06b6d4;
   --accent: #8b5cf6;
-  --dark: #0f172a;
+  --dark: #000000;
   --light: #f8fafc;
   --gray: #64748b;
   --success: #10b981;
@@ -32,7 +32,8 @@ body {
   line-height: 1.6;
 }
 
-code, pre {
+code,
+pre {
   font-family: 'Fira Code', monospace;
 }
 
@@ -103,4 +104,40 @@ section {
   color: var(--gray);
   font-family: 'Fira Code', monospace;
   font-size: 0.9rem;
+}
+
+/* ===== GLOBAL RESPONSIVE ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 80px 0;
+    min-height: auto;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    margin-bottom: 35px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: clamp(1.3rem, 8vw, 1.8rem);
+    margin-bottom: 25px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
 }

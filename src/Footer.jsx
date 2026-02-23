@@ -8,7 +8,7 @@ const Footer = () => {
   const [imageExpanded, setImageExpanded] = useState(false);
 
   return (
-    <motion.footer 
+    <motion.footer
       className="footer"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -16,16 +16,16 @@ const Footer = () => {
     >
       <div className="container">
         <div className="footer-content">
-          
+
           {/* Profile Section with Image - Fixed */}
-          <motion.div 
+          <motion.div
             className="footer-profile"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
           >
             <div className="profile-image-wrapper">
-              <div 
+              <div
                 className="profile-image-container profile-image-clickable"
                 onClick={() => setImageExpanded(true)}
                 role="button"
@@ -33,7 +33,7 @@ const Footer = () => {
                 onKeyDown={(e) => e.key === 'Enter' && setImageExpanded(true)}
                 aria-label="View full profile photo"
               >
-                <img 
+                <img
                   src="/Luckypic.jpg"
                   alt="Lucky Shankhala"
                   className="profile-image"
@@ -68,7 +68,7 @@ const Footer = () => {
                     >
                       <FaTimes />
                     </button>
-                    <img 
+                    <img
                       src="/Luckypic.jpg"
                       alt="Lucky Shankhala - Full view"
                       className="image-preview-img"
@@ -77,7 +77,7 @@ const Footer = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-            
+
             <div className="profile-info">
               <h4>Lucky Shankhala</h4>
               <p>MERN Stack Developer</p>
@@ -88,7 +88,7 @@ const Footer = () => {
                 <a href="https://github.com/Lucky842662" target="_blank" rel="noopener noreferrer">
                   <FaGithub />
                 </a>
-                <a href="https://linkedin.com/in/luckyshankhala" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/lucky-shankhala-800457276?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin />
                 </a>
               </div>
@@ -113,7 +113,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="footer-copyright">
             <p>
-              © {currentYear} Built with <FaHeart className="heart-icon" /> using React 
+              © {currentYear} Built with <FaHeart className="heart-icon" /> using React
             </p>
             <p className="footer-signature">
               <span className="code-comment">&lt;DevelopedBy /&gt;</span> Lucky Shankhala

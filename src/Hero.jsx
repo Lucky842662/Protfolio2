@@ -55,13 +55,13 @@ const Hero = () => {
   };
 
   return (
-    <motion.section 
-      id="home" 
+    <motion.section
+      id="home"
       className="hero"
       style={{ y, opacity }}
     >
       <div className="hero-container">
-        <motion.div 
+        <motion.div
           className="hero-content"
           variants={containerVariants}
           initial="hidden"
@@ -70,12 +70,12 @@ const Hero = () => {
           <motion.div className="code-comment" variants={itemVariants}>
             &lt;!-- Hello, World! --&gt;
           </motion.div>
-          
+
           <motion.h1 className="hero-title" variants={itemVariants}>
             <span className="hero-greeting">const developer = </span>
             <span className="hero-brace">{'{'}</span>
           </motion.h1>
-          
+
           <motion.div className="hero-name" variants={itemVariants}>
             <span className="line-number">01.</span>
             <span className="property">name</span>
@@ -83,7 +83,7 @@ const Hero = () => {
             <span className="value">"Lucky Shankhala"</span>
             <span className="punctuation">,</span>
           </motion.div>
-          
+
           <motion.div className="hero-role" variants={itemVariants}>
             <span className="line-number">02.</span>
             <span className="property">role</span>
@@ -92,28 +92,28 @@ const Hero = () => {
               "<span ref={typedRef}></span>"
             </span>
           </motion.div>
-          
+
           <motion.div className="hero-brace-close" variants={itemVariants}>
             <span className="hero-brace">{'};'}</span>
           </motion.div>
-          
+
           <motion.p className="hero-description" variants={itemVariants}>
-            Passionate full-stack developer with 1+ years of experience building 
-            web applications. I specialize in the MERN stack, crafting 
+            Passionate full-stack developer with 1+ years of experience building
+            web applications. I specialize in the MERN stack, crafting
             pixel-perfect interfaces backed by robust serverless architectures.
           </motion.p>
-          
+
           <motion.div className="hero-buttons" variants={itemVariants}>
-            <motion.a 
-              href="#projects" 
+            <motion.a
+              href="#projects"
               className="btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               view projects()
             </motion.a>
-            <motion.a 
-              href="\public\Lucky.jpg" 
+            <motion.a
+              href="\Lucky.jpg"
               className="btn-secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -126,8 +126,8 @@ const Hero = () => {
           <motion.div className="hero-social" variants={itemVariants}>
             {[
               { icon: FaGithub, url: 'https://github.com/Lucky842662' },
-              { icon: FaLinkedin, url: 'https://linkedin.com' },
-              { icon: FaTwitter, url: 'https://twitter.com' },
+              { icon: FaLinkedin, url: 'https://www.linkedin.com/in/lucky-shankhala-800457276?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
+              { icon: FaTwitter, url: 'https://x.com/lucky64825' },
               { icon: FaCode, url: 'https://codepen.io' }
             ].map((social, index) => (
               <motion.a
@@ -147,7 +147,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="hero-visual"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -197,30 +197,30 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          
+
           <div className="floating-elements">
-            <motion.div 
+            <motion.div
               className="floating-icon mongo"
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
             >
               🍃
             </motion.div>
-            <motion.div 
+            <motion.div
               className="floating-icon express"
               animate={{ y: [0, -30, 0] }}
               transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
             >
               ⚡
             </motion.div>
-            <motion.div 
+            <motion.div
               className="floating-icon react"
               animate={{ y: [0, -25, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, delay: 1 }}
             >
               ⚛️
             </motion.div>
-            <motion.div 
+            <motion.div
               className="floating-icon node"
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, delay: 1.5 }}
@@ -231,7 +231,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="scroll-indicator"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
